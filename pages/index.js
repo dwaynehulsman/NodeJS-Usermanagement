@@ -6,7 +6,12 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-	res.send(req.body);
+	knex('users').where({
+		username: req.body.username,
+		password: req.body.password
+	}).select('id').then(function(id) {
+		res.send(id);
+	});
 });
 
 module.exports = router;
