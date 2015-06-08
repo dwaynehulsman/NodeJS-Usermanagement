@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>{{ title }}</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
 <body>
 
-Some magic: {{ magic }}
+    <div class="container-fluid">
+        <div class="row">
 
-<form action="/test" method="post">
-	<input type="text" name="somevar">
-	<input type="submit" value="Go">
-</form>
+            <div class="col-md-3">
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="page-header">
+                    <h1>{{ title }} <small>{{ subTitle }}</small></h1>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><h4>Login</h4></div>
+                    <form class="bs-form" action="/" method="post" name="login_form">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" class="form-control" placeholder="Username" name="username">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" placeholder="Password" name="password">
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row ">
+                                <div class="col-xs-8 col-sm-10 col-md-9 col-lg-10">
+                                    <button type="submit" class="btn btn-success">Login</button>
+                                </div>
+                                <div class="col-xs-4 col-sm-2 col-md-3 col-lg-2">
+                                    <a href="register" class="btn btn-danger">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-3"></div>
+
+    </div>
 
 </body>
 </html>
